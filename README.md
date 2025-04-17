@@ -5,5 +5,7 @@
 ### FUNCTIONS
 ```
 * List of tg-bots 
-* Manage status of orders
+* Statistics of your bots
+* List of orders
+* Manage status of orders 
 ```
