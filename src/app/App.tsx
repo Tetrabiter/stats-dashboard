@@ -1,10 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router"
+import LandingPage from "../pages/LandingPage"
+import PrivateRoute from "./routing/PrivateRoute"
+
+
 function App() {
 
   return (
     <>
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+
+          <Route element={<PrivateRoute />}>
+          
+            
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

@@ -12,7 +12,7 @@ const LandingPage = () => {
 
             <main>
                 <div>
-                    <p></p>
+                    <p className="font-montserrat">Track your tg-bots with Re.Bots dashboard!</p>
                     <img src="" alt="" />
                 </div>
 
