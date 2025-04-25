@@ -1,12 +1,14 @@
 import Logo from "../shared/ui/Logo";
-
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
     return ( 
         <div className="">
-            <header>
+            <header className="flex items-center">
                 <Logo />
-                <button>Get Started</button>
+                <Link to='dashboard'>
+                    <button>Get Started</button>
+                </Link>
             </header>
 
 

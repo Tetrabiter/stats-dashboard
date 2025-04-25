@@ -38,58 +38,58 @@ const BotsPage = () => {
 
 
     return (
-        <div className="w-full min-h-screen">
+        <div className="w-full min-h-screen bg-gray-100 text-gray-800">
             <div className="flex">
-                <aside className="w-1/6">
-                    <div className="w-full flex items-center gap-2 text-xl">
-                        <AiFillHome/>
-                        <p>Home</p>
-                    </div>
-                    <div className="w-full flex items-center gap-2 text-xl">
-                        <IoStatsChartOutline/>
-                        <p>Stats</p>
-                    </div>
-                    <div className="w-full flex items-center gap-2 text-xl">
-                        <BiSupport />
-                        <p>Support</p>
-                    </div>
-                    <div className="w-full flex items-center gap-2 text-xl">
-                        <AiOutlineMoon />
-                        <p>Dark mode</p>
-                    </div>
-                    <div className="w-full flex items-center gap-2 text-xl">
-                        <AiOutlineUser />
-                        <p>Profile</p>
+                <aside className="w-1/6 min-h-screen bg-white p-4 shadow-md">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2 text-lg hover:text-blue-600 cursor-pointer">
+                            <AiFillHome />
+                            <span>Home</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-lg hover:text-blue-600 cursor-pointer">
+                            <IoStatsChartOutline />
+                            <span>Stats</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-lg hover:text-blue-600 cursor-pointer">
+                            <BiSupport />
+                            <span>Support</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-lg hover:text-blue-600 cursor-pointer">
+                            <AiOutlineMoon />
+                            <span>Dark mode</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-lg hover:text-blue-600 cursor-pointer">
+                            <AiOutlineUser />
+                            <span>Profile</span>
+                        </div>
                     </div>
                 </aside>
 
-                <div className="">
-                    <div>
-                        <p className="text-3xl font-bold">Hello!</p>
+                <main className="flex-1 p-8">
+                    <header className="mb-6">
+                        <h1 className="text-4xl font-bold mb-2">Hello!</h1>
+                        <div className="text-xl space-y-1">
+                            <p>
+                                Total earnings: <b className="text-green-600">$300</b>
+                            </p>
+                            <p>
+                                Users: <b className="text-blue-500">100</b>
+                            </p>
+                        </div>
+                    </header>
+
+                    <div className="flex flex-col gap-5">
+                        <section className="bg-white p-4 rounded-xl shadow-md">
+                            <Chart options={chartOptions} series={chartSeries} type="area" />
+                        </section>
+                        <section className="bg-white p-4 rounded-xl shadow-md">
+                            <Chart options={chartOptions} series={chartSeries} type="area" />
+                        </section>
                     </div>
-                    <div className="text-2xl font-semibold">
-                        <p>Total earnings: <b className="text-green-700">300$</b></p>
-                        <p>Users:<b className="text-blue-500"> 100</b></p>
-                    </div>
-                    <div>
-                        <Chart
-                            options={chartOptions}
-                            series={chartSeries}
-                            type="area"
-                            height={400}
-                            width={800}
-                        />
-                        <Chart
-                            options={chartOptions}
-                            series={chartSeries}
-                            type="line"
-                            height={400}
-                            width={800}
-                        />
-                    </div>
-                </div>
+                </main>
             </div>
         </div>
+
     );
 }
 
