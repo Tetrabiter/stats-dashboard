@@ -1,10 +1,11 @@
 import Logo from "../shared/ui/Logo";
+import Carousel from "../shared/ui/Carousel";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
     return ( 
-        <div className="">
-            <header className="flex items-center">
+        <div className="w-full h-screen flex flex-col items-center bg-gray-100">
+            <header className="w-full flex items-center justify-between">
                 <Logo />
                 <Link to='dashboard'>
                     <button>Get Started</button>
@@ -12,26 +13,21 @@ const LandingPage = () => {
             </header>
 
 
-            <main>
-                <div>
-                    <p className="font-montserrat">Track your tg-bots with Re.Bots dashboard!</p>
-                    <img src="" alt="" />
+            <main className="h-[100vh]">
+                <div className="flex">
+                    <p className="font-montserrat font-semibold">Track your tg-bots data with Re.Bots dashboard!</p>
+                    <img className="w-1/3" src="" alt="" />
                 </div>
 
                 <div>
-                    <p></p>
-                    <div>
-                        
-                    </div>
+                    <Carousel />     
                 </div>
             </main>
 
 
-            <footer>
-                <div>
-                    <p></p>
-                    <p></p>
-                </div>
+            <footer className="w-full flex justify-center gap-3">
+                <p>My github</p>
+                <a href="https://github.com/Tetrabiter">Click</a> 
             </footer>
         </div>
     );
