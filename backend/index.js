@@ -1,8 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const cors = require('cors');
-require('dotenv').config();
+const authRoutes = require('./routes/authRoutes');
+const protectedRoutes = require('./routes/protectedRoutes');
+
 
 app.get('/', (req , res) => {
     res.send('Server pashet!');
@@ -11,7 +14,8 @@ app.get('/', (req , res) => {
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/auth' , require('./routes/authRoutes'));
+app.use('/api/auth' , authRoutes);
+app.use('/api' , protectedRoutes);
 
 app.listen(PORT , () =>{
     console.log(`🚀 Сервер запущен на http://localhost:${PORT}`)
