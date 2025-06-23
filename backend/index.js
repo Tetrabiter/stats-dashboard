@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth' , authRoutes);
-app.use('/api' , protectedRoutes);
+app.use('/api/protected' , protectedRoutes);
 
 app.listen(PORT , () =>{
     console.log(`🚀 Сервер запущен на http://localhost:${PORT}`)
